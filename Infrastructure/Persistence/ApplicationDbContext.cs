@@ -26,7 +26,7 @@ namespace Infrastructure.Persistence
             _dateTime = dateTime;
         }
 
-        public DbSet<TodoList> TodoLists => Set<TodoList>();
-        public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+        public DbSet<Investments> TodoLists => Set<>(Investments);
+        public DbSet<InvestmentItem> TodoItems => Set<InvestmentItem>();
     }
 }
