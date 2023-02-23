@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentValidation;
 
 namespace Application.Investments.Queries
 {
-    internal class GetInvestmentQueryValidator
+    public class GetInvestmentQueryValidator : AbstractValidator<GetInvestmentQuery>
     {
+        public GetInvestmentQueryValidator()
+        {
+            RuleFor(x => x.Id)
+            .NotEmpty().WithMessage("Id is required.");
+        }
     }
 }
